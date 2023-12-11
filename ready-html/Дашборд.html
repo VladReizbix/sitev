@@ -1,0 +1,73 @@
+<!DOCTYPE html>  
+<html>  
+ <head>  
+  <meta charset=utf-8>  
+  <link rel=stylesheet href=style4.css>  
+  <title>Статистика</title>  
+  <script src=https://www.google.com/jsapi></script>  
+  <script>  
+   google.load('visualization', '1', {packages:['corechart']});  
+   google.setOnLoadCallback(drawChart);  
+   function drawChart() {  
+    var data = google.visualization.arrayToDataTable([
+  ['Возраст', 'ЛОР', 'Массаж', 'ЛФК', 'Логопед'],
+  ['15', 13, 7, 8, 10],
+  ['18', 20, 30, 40, 50],
+  ['20', 12, 10, 12, 13]
+]);
+
+var options = {   
+  title: 'По направлениям', 
+  hAxis: {
+    title: 'Возраст', 
+    format: '0',
+    ticks: ['ЛОР', 'Массаж', 'ЛФК', 'Логопед']
+  }, 
+  vAxis: {title: 'Всего участников', format: '0'} 
+};
+
+var chart = new google.visualization.ColumnChart(document.getElementById('oil'));
+chart.draw(data, options);
+    var data2 = google.visualization.arrayToDataTable([   
+     ['Возраст', 'ЛОР', 'Массаж', 'ЛФК', 'Логопед'],   
+     ['15', 10, 50, 80, 10],   
+     ['18', 10, 40, 40, 50],   
+     ['20', 10, 8, 80, 16]   
+    ]);   
+    var options2 = {   
+      title: 'По часам', 
+  hAxis: {
+    title: 'Возраст', 
+    format: '0',
+    ticks: ['ЛОР', 'Массаж', 'ЛФК', 'Логопед']
+  }, 
+  vAxis: {title: 'Всего участников', format: '0'} 
+}; 
+    var chart2 = new google.visualization.ColumnChart(document.getElementById('gas'));  
+    chart2.draw(data2, options2);  
+    var data3 = google.visualization.arrayToDataTable([    
+     ['Возраст', 'Ментальные нарушения', 'Сенсорные нарушения', 'Локомоторные нарушения', 'Неврологические нарушения'],    
+     ['15', 30, 40, 60, 80],    
+     ['18', 20, 30, 50, 60],    
+     ['20', 50, 100, 10, 20]    
+    ]);    
+    var options3 = {    
+      title: 'По направлениям', 
+  hAxis: {
+    title: 'Возраст', 
+    format: '0',
+    ticks: ['Ментальные нарушения', 'Сенсорные нарушения', 'Локомоторные нарушения', 'Неврологические нарушения']
+  }, 
+  vAxis: {title: 'Всего участников', format: '0'} 
+};   
+    var chart3 = new google.visualization.ColumnChart(document.getElementById('coal'));   
+    chart3.draw(data3, options3);  
+   }  
+  </script>  
+ </head>  
+ <body>  
+  <div id="oil" style="width: 800px; height: 400px;"></div>  
+  <div id="gas" style="width: 800px; height: 400px;"></div>  
+  <div id="coal" style="width: 1000px; height: 800px;"></div>  
+ </body>  
+ </html>

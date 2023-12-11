@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="admin.css">
+	<title>Администратор</title>
+</head>
+<body>
+	
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand"><i class='bx bxs-smile icon'></i> Админ </a>
+		<ul class="side-menu">
+			<li><a href="admin.html" class="active"><i class='bx bxs-dashboard icon' ></i> Статистика</a></li>
+			<li class="divider" data-text="Меню">mein</li>
+			<li>
+				<a href="#"><i class='bx bxs-inbox icon' ></i> Задачи <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">Участники</a></li>
+					<li><a href="#">Планы</a></li>
+					<li><a href="#">Документы</a></li>
+					<li><a href="#">Управление проектами</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><i class='bx bxs-chart icon' ></i> Чаты</a></li>
+			<li><a href="cards.html"><i class='bx bxs-widget icon' ></i> Карточки</a></li>
+			<li class="divider" data-text="Таблицы и отчеты">Table and forms</li>
+			<li><a href="table.html"><i class='bx bx-table icon' ></i> Таблицы</a></li>
+			<li>
+				<a href="#"><i class='bx bxs-notepad icon' ></i> Отчеты <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">Посещение</a></li>
+					<li><a href="#">Проектирование</a></li>
+					<li><a href="#">Регистрирование</a></li>
+					<li><a href="#">Участие</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="ads">
+			<div class="wrapper">
+				<a href="../index.html" class="btn-upgrade">Выход</a>
+				<p>Вернуться на <span>Аккаунт</span> можно через <span>15 минут</span> после выхода</p>
+			</div>
+		</div>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<form action="#">
+				<div class="form-group">
+					<input type="text" placeholder="Search...">
+					<i class='bx bx-search icon' ></i>
+				</div>
+			</form>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-bell icon' ></i>
+				<span class="badge">5</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon' ></i>
+				<span class="badge">8</span>
+			</a>
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="аватарка.jpg" alt="">
+				<ul class="profile-link">
+					<li><a href="admin.html"><i class='bx bxs-user-circle icon' ></i> Профиль</a></li>
+					<li><a href="set.html"><i class='bx bxs-cog' ></i> Настройки</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		
+		<main class="table" id="customers_table">
+      <div class="profile">
+        <img id="profilePicture" class="profile__picture" src="default-profile-picture.png" alt="Profile Picture">
+        
+        <div class="profile__input">
+          <label for="profileImage">Загрузить фото:</label>
+          <input id="profileImage" type="file" accept="image/*">
+      </div>
+
+        <div class="profile__input">
+            <label for="name">ФИО:</label>
+            <input id="name" type="text" placeholder="Your name">
+        </div>
+        
+        <div class="profile__input">
+            <label for="email">Электронная почта:</label>
+            <input id="email" type="text" placeholder="Your email">
+        </div>
+        
+        <div class="profile__input">
+            <label for="phone">Телефон:</label>
+            <input id="phone" type="text" placeholder="Your phone number">
+        </div>
+        
+        <div class="profile__input">
+            <label for="group">Группа:</label>
+            <select id="group" class="profile__select">
+                <option value="">Select a group</option>
+                <option value="group1">556ИС-3</option>
+                <option value="group2">555ИС-3</option>
+                <option value="group3">576ИС-3</option>
+            </select>
+        </div>
+        
+        <div class="profile__input">
+            <label for="gender">Пол:</label>
+            <input id="gender" type="text" placeholder="Your gender">
+        </div>
+        
+        <div class="profile__input">
+            <label for="age">Возраст:</label>
+            <input id="age" type="text" placeholder="Your age">
+        </div>
+        
+        <div class="profile__checkbox">
+            <input id="notificationToggle" type="checkbox">
+            <label for="notificationToggle">Выключить уведомления</label>
+        </div>
+        
+        
+        
+        <button id="saveBtn" class="profile__btn">Сохранить настройки</button>
+    </div>
+
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- NAVBAR -->
+
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="admin.js"></script>
+  <script src="set.js"></script>
+  
+</body>
+</html>
